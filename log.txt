@@ -1,0 +1,23 @@
+commit c2e657732297bdbb9b990d66844540bdb53f6b48 (HEAD -> task1_branch)
+Author: AlexSemenenko <aleksei.syemyenenko@gmail.com>
+Date:   Sun Feb 16 19:12:56 2020 +0300
+
+    change status.txt
+
+commit 357b47824f29acefe9be101e448136ba2abb0b83
+Author: AlexSemenenko <aleksei.syemyenenko@gmail.com>
+Date:   Sun Feb 16 19:10:56 2020 +0300
+
+    add .gitignore
+
+commit cef14d16618f1c846679a1613f4bc9eac15054dd (origin/master, origin/HEAD, master)
+Author: Alexei <48149971+AlexeSemenenko@users.noreply.github.com>
+Date:   Sun Feb 16 14:33:07 2020 +0300
+
+    Update README.md
+
+commit 6928f61b0c5eb7bd36cbeefd44a9b5c4423f3033
+Author: Alexei <48149971+AlexeSemenenko@users.noreply.github.com>
+Date:   Sun Feb 16 14:32:26 2020 +0300
+
+    Initial commit
