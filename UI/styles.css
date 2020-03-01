@@ -1,0 +1,583 @@
+header {
+    position: fixed;
+    background-color: #d1d1d1;
+    z-index: 1;
+    height: 6.5%;
+    width: 1000%;
+    top: 0%;
+    left: 0%;
+}
+
+.site-name {
+    position: absolute;
+    cursor: default;
+    text-decoration: underline;
+    font-family: 'Annie Use Your Telescope';
+    font-size: 225%;
+    left: 2.75%;
+    top: -30%;
+}
+
+.log-out {
+    position: absolute;
+    font-size: 100%;
+    font-weight: bold;
+    left: 6.75%;
+    top: 50%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.username {
+    position: absolute;
+    font-size: 100%;
+    font-style: oblique;
+    left: 6.635%;
+    top: -5%;
+    cursor: default;
+}
+
+.filters {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 30%;
+    width: 15%;
+    top: 10%;
+    left: 15%;
+    background-color: white;
+}
+
+.filter-by {
+    position: absolute;
+    font-size: 150%;
+    font-weight: 200;
+    left: 57%;
+    top: -8%;
+}
+
+.filter-line {
+    position: absolute;
+    background-color: #d1d1d1;
+    color: #d1d1d1;
+    opacity: 0.7;
+    height: 1%;
+    width: 42%;
+    border: none;
+    top: 5%;
+    left: 50%;
+}
+
+.date-name {
+    position: absolute;
+    font-size: 125%;
+    font-weight: 200;
+    top: 9%;
+    left: 4.5%;
+}
+
+.first-date {
+    position: absolute;
+    width: 43%;
+    top: 11%;
+    left: 52%;
+    cursor: text;
+    border-radius: 15px;
+}
+
+.second-date {
+    position: absolute;
+    width: 43%;
+    top: 21%;
+    left: 52%;
+    cursor: text;
+    border-radius: 15px;
+}
+
+.name-name {
+    position: absolute;
+    font-size: 125%;
+    font-weight: 200;
+    top: 27%;
+    left: 27%;
+}
+
+.name {
+    position: absolute;
+    width: 43%;
+    top: 35%;
+    left: 52%;
+    cursor: text;
+    border-radius: 15px;
+}
+
+.hashtags-name {
+    position: absolute;
+    font-size: 125%;
+    font-weight: 200;
+    top: 40%;
+    left: 16%;
+}
+
+.hashtags {
+    position: absolute;
+    width: 43%;
+    top: 47%;
+    left: 52%;
+    cursor: text;
+    border-radius: 15px;
+}
+
+.apply {
+    position: absolute;
+    font-size: 100%;
+    font-weight: bold;
+    left: 74%;
+    top: 58%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.news-box {
+    overflow: auto;
+    position: absolute;
+    background-color: #ebebeb;
+    height: 86.5%;
+    width: 40.5%;
+    left: 30%;
+    top: 6.5%;
+}
+
+.add-new-post {
+    height: 5%;
+    position: absolute;
+    font-size: 100%;
+    font-weight: bold;
+    left: 42%;
+    top: 1%;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.post1 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 8%;
+}
+
+.post2 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 33%;
+}
+
+.post3 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 58%;
+}
+
+.post4 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 83%;
+}
+
+.post5 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 108%;
+}
+
+.post6 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 133%;
+}
+
+.post7 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 158%;
+}
+
+.post8 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 183%;
+}
+
+.post9 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 208%;
+}
+
+.post10 {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 20%;
+    left: 5%;
+    top: 233%;
+}
+
+.user-ava {
+    height: 25%;
+}
+
+.edit-img {
+    position: absolute;
+    height: 12%;
+    right: 4%;
+    cursor: pointer;
+}
+
+.delete-img {
+    position: absolute;
+    height: 12%;
+    right: 1%;
+    cursor: pointer;
+}
+
+.header-post{
+    text-align: center;
+    position: absolute; 
+    height: 13%;
+    width: 25%;
+    background-color: #ebebeb;
+    border-radius: 15px;
+    left: 8%;
+    top: 5%;
+}
+
+.example1 {
+    position: relative;
+    height: 40%;
+    left: 2%;
+}
+
+.like-img {
+    position: absolute;
+    height: 12%;
+    cursor: pointer;
+    bottom: -13%;
+    left: 0%;
+}
+
+.like-counter {
+    position: absolute;
+    left: 4%;
+    top: 92%;
+    font-weight: 600;
+    
+}
+
+.hashtags-place {
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    border-radius: 15px;
+    width: 60%;
+    height: 10%;
+    top: 102%;
+    left: 10%;
+    cursor: text;
+}
+
+.more-button {
+    position: absolute;
+    font-size: 100%;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    left: 45%;
+    top: 256%;
+}
+
+footer {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    width: 1000%;
+    height: 7%;
+    left: 0%;
+    bottom: 0%;
+}
+
+.footer-line{
+    position: absolute;
+    height: 3%;
+    width: 4.5%;
+    border: none;
+    background-color: #d1d1d1;
+    color: #d1d1d1;
+    opacity: 0.6;
+    left: 2.75%;
+    bottom: 84%;
+}
+
+.information {
+    position: absolute;
+    font-size: 75%;
+    opacity: 0.6;
+    left: 4.1%;
+    bottom: 64%;
+}
+
+@media only screen and (min-width: 500px) {
+
+    header {
+        height: 3%;
+    }
+
+    .site-name {
+        top: -45%;
+    }
+
+    .username {
+        left: 6.55%;
+        top: -7%;
+    }
+    
+    .filter-by {
+        font-size: 125%;
+    }
+
+    .filter-line {
+        height: 0.5%;
+        top: 3%;
+    }
+
+    .date-name {
+        font-size: 100%;
+        top: 8.25%;
+        left: -50%;
+    }
+
+    .first-date {
+        width: 75%;
+        top: 8%;
+        left: 18%;
+    }
+    
+    .second-date {
+        width: 75%;
+        top: 13%;
+        left: 18%;
+    }
+
+    .name-name {
+        font-size: 100%;
+        top: 15%;
+        left: -17%;
+    }
+    
+    .name {
+        width: 75%;
+        top: 18.25%;
+        left: 19%;
+    }
+
+    .hashtags-name {
+        font-size: 100%;
+        top: 20.5%;
+        left: -32%;
+    }
+    
+    .hashtags {
+        width: 75%;
+        top: 23.5%;
+        left: 18%;
+    }
+
+    .apply {
+        left: 50%;
+        top: 30%;
+    }
+
+    .news-box {
+        height: 91%;
+        width: 40.5%;
+        top: 3.5%;
+    }
+
+    .add-new-post {
+        height: 2%;
+        left: 37%;
+        top: 0.5%;
+    }
+
+    .post1 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 3%;
+    }
+
+    .post1 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 3%;
+    }
+
+    .post2 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 15%;
+    }
+
+    .post3 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 27%;
+    }
+
+    .post4 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 39%;
+    }
+
+    .post5 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 51%;
+    }
+
+    .post6 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 63%;
+    }
+
+    .post7 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 75%;
+    }
+
+    .post8 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 87%;
+    }
+
+    .post9 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 99%;
+    }
+
+    .post10 {
+        width: 90%;
+        height: 10%;
+        left: 5%;
+        top: 111%;
+    }
+
+    .user-ava {
+        height: 12%;
+    }
+
+    .edit-img {
+        height: 10%;
+        right: 6%;
+    }
+    
+    .delete-img {
+        height: 10%;
+        right: 1%;
+    }
+
+    .header-post{
+        height: 9%;
+        width: 45%;
+        left: 12%;
+        top: 3%;
+    }
+
+    .example1 {
+        position: relative;
+        height: 40%;
+        left: 2%;
+    }
+    
+    .like-img {
+        height: 10%;
+        bottom: -13%;
+        left: 0%;
+    }
+    
+    .like-counter {
+        left: 6%;
+        top: 93%;
+    }
+
+    .hashtags-place {
+        width: 85%;
+        height: 8%;
+        top: 104%;
+        left: 15%;
+    }
+
+    .more-button {
+        left: 40%;
+        top: 123%;
+        height: 1.5%;
+        width: 20%;
+    }
+
+    footer {
+        height: 3%;
+    }
+    
+    .footer-line{
+        height: 4.5%;
+        opacity: 0.7;
+        left: 2.75%;
+        bottom: 158%;
+    }
+    
+    .information {
+        font-size: 80%;
+        opacity: 0.7;
+        left: 3%;
+        bottom: 140%;
+    }
+}
