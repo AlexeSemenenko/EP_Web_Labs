@@ -1,0 +1,16 @@
+get_heros_data:
+We get information about all heros in DOTA2.
+
+get_heros_stats:
+We get full statistics about all heros in DOTA2.
+
+get_list_of_pro_players:
+We get list with all pro players in DOTA2 with their statistics.
+
+get_win_rates_for_certain_item_timings:
+The first parameter is the name of item, the second - unique hero id.
+We get win rates with this item in different timings in the game.
+
+get_win_rates_for_hero_in_certain_linerole:
+The first parameter is the lane role, the second - unique hero id.
+We get win rates on the line for the selected hero in different timings.
