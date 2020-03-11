@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "077ba604-cb45-460d-bb2b-b68639bfc106",
+		"name": "goodreads_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_author_info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<GoodreadsResponse>\r\n<GoodreadsResponse>\r\n  <Request>\r\n    <!-- ... request metadata omitted ... -->\r\n  </Request>\r\n  <search>\r\n    <query>\r\n      <![CDATA[ Ender's Game ]]>\r\n    </query>\r\n    <results-start>1</results-start>\r\n    <results-end>10</results-end>\r\n    <total-results>100</total-results>\r\n    <source>Goodreads</source>\r\n    <query-time-seconds>0.10</query-time-seconds>\r\n    <results>\r\n      <work>\r\n        <books_count type=\"integer\">1</books_count>\r\n        <id type=\"integer\">11571577</id>\r\n        <original_publication_day type=\"integer\">20</original_publication_day>\r\n        <original_publication_month type=\"integer\">4</original_publication_month>\r\n        <original_publication_year type=\"integer\">2010</original_publication_year>\r\n        <ratings_count type=\"integer\">300</ratings_count>\r\n        <text_reviews_count type=\"integer\">16</text_reviews_count>\r\n        <average_rating>4.17</average_rating>\r\n        <best_book type=\"Book\">\r\n          <id type=\"integer\">8782597</id>\r\n          <title>Ender's Game</title>\r\n          <author>\r\n            <id type=\"integer\">2940867</id>\r\n            <name>Frederic P. Miller</name>\r\n          </author>\r\n          <image_url>\r\n            https://s.gr-assets.com/assets/nophoto/book/111x148-6204a98ba2aba2d1aa07b9bea87124f8.png\r\n          </image_url>\r\n          <small_image_url>\r\n            https://s.gr-assets.com/assets/nophoto/book/50x75-6121bf4c1f669098041843ec9650ca19.png\r\n          </small_image_url>\r\n        </best_book>\r\n      </work>\r\n      <!-- ... additional results omitted ... -->\r\n    </results>\r\n  </search>\r\n</GoodreadsResponse>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.goodreads.com/author/show.xml?key=uZrfmZXgpiID0ZEFKz7hRw&id=69",
+					"protocol": "https",
+					"host": [
+						"www",
+						"goodreads",
+						"com"
+					],
+					"path": [
+						"author",
+						"show.xml"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "uZrfmZXgpiID0ZEFKz7hRw",
+							"description": "api_key"
+						},
+						{
+							"key": "id",
+							"value": "69",
+							"description": "author_id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_user_info",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<GoodreadsResponse>\r\n<GoodreadsResponse>\r\n  <Request>\r\n    <!-- ... request metadata omitted ... -->\r\n  </Request>\r\n  <search>\r\n    <query>\r\n      <![CDATA[ Ender's Game ]]>\r\n    </query>\r\n    <results-start>1</results-start>\r\n    <results-end>10</results-end>\r\n    <total-results>100</total-results>\r\n    <source>Goodreads</source>\r\n    <query-time-seconds>0.10</query-time-seconds>\r\n    <results>\r\n      <work>\r\n        <books_count type=\"integer\">1</books_count>\r\n        <id type=\"integer\">11571577</id>\r\n        <original_publication_day type=\"integer\">30</original_publication_day>\r\n        <original_publication_month type=\"integer\">4</original_publication_month>\r\n        <original_publication_year type=\"integer\">2010</original_publication_year>\r\n        <ratings_count type=\"integer\">300</ratings_count>\r\n        <text_reviews_count type=\"integer\">16</text_reviews_count>\r\n        <average_rating>4.17</average_rating>\r\n        <best_book type=\"Book\">\r\n          <id type=\"integer\">8782597</id>\r\n          <title>Ender's Game</title>\r\n          <author>\r\n            <id type=\"integer\">2940867</id>\r\n            <name>Frederic P. Miller</name>\r\n          </author>\r\n          <image_url>\r\n            https://s.gr-assets.com/assets/nophoto/book/111x148-6204a98ba2aba2d1aa07b9bea87124f8.png\r\n          </image_url>\r\n          <small_image_url>\r\n            https://s.gr-assets.com/assets/nophoto/book/50x75-6121bf4c1f669098041843ec9650ca19.png\r\n          </small_image_url>\r\n        </best_book>\r\n      </work>\r\n      <!-- ... additional results omitted ... -->\r\n    </results>\r\n  </search>\r\n</GoodreadsResponse>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://www.goodreads.com/user/show/111108159.xml ?key=uZrfmZXgpiID0ZEFKz7hRw",
+					"protocol": "https",
+					"host": [
+						"www",
+						"goodreads",
+						"com"
+					],
+					"path": [
+						"user",
+						"show",
+						"111108159.xml "
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "uZrfmZXgpiID0ZEFKz7hRw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.goodreads.com/event/index.xml?key=uZrfmZXgpiID0ZEFKz7hRw&search[country_code]=AU",
+					"protocol": "https",
+					"host": [
+						"www",
+						"goodreads",
+						"com"
+					],
+					"path": [
+						"event",
+						"index.xml"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "uZrfmZXgpiID0ZEFKz7hRw",
+							"description": "dev_key"
+						},
+						{
+							"key": "search[country_code]",
+							"value": "AU",
+							"description": "country_id"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

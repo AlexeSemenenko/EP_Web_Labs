@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "f17ce9bf-63f3-4429-86e8-a4f1491dc174",
+		"name": "newton_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_factor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.haloapi.com/profile/h5/profiles/{player}/appearance?Ocp-Apim-Subscription-Key=08176cc80e444c30b63273f5a2b52a9e",
+					"protocol": "https",
+					"host": [
+						"www",
+						"haloapi",
+						"com"
+					],
+					"path": [
+						"profile",
+						"h5",
+						"profiles",
+						"{player}",
+						"appearance"
+					],
+					"query": [
+						{
+							"key": "Ocp-Apim-Subscription-Key",
+							"value": "08176cc80e444c30b63273f5a2b52a9e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_zeroes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newton.now.sh/zeroes/x^2+2x",
+					"protocol": "https",
+					"host": [
+						"newton",
+						"now",
+						"sh"
+					],
+					"path": [
+						"zeroes",
+						"x^2+2x"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_integ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://newton.now.sh/integrate/x^4+2x^3-x^(-1)",
+					"protocol": "https",
+					"host": [
+						"newton",
+						"now",
+						"sh"
+					],
+					"path": [
+						"integrate",
+						"x^4+2x^3-x^(-1)"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

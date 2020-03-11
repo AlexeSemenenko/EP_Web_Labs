@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "299d5e7a-9d78-4cd5-94e1-fcdf1b40aec3",
+		"name": "dota2_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_list_of_pro_players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/proPlayers",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"proPlayers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_heros_data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/heroes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"heroes"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_heros_stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/heroStats",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"heroStats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_win_rates_for_hero_in_certain_linerole",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/scenarios/laneRoles?lane_role=1&hero_id=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"scenarios",
+						"laneRoles"
+					],
+					"query": [
+						{
+							"key": "lane_role",
+							"value": "1"
+						},
+						{
+							"key": "hero_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_win_rates_for_certain_item_timings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opendota.com/api/scenarios/itemTimings?item=spirit_vessel&hero_id=42",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opendota",
+						"com"
+					],
+					"path": [
+						"api",
+						"scenarios",
+						"itemTimings"
+					],
+					"query": [
+						{
+							"key": "item",
+							"value": "spirit_vessel"
+						},
+						{
+							"key": "hero_id",
+							"value": "42"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

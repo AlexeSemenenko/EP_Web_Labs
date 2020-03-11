@@ -1,0 +1,13 @@
+In all requests, one of the parameters is the API key.
+
+get_author_info:
+Another parameter is the unique ID of the author.
+As a result we get all available information about the selected author.
+
+get_user_info:
+Another parameter is the unique user id or username. If you don't use it , the information will be from your personal account.
+As a result we get an xml response with the public information about the given Goodreads user.
+
+get_events:
+Another parameter is the unique country code.
+And we get information about events in the selected area.
