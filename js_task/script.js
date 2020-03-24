@@ -289,36 +289,28 @@
                 }
             }
 
-            returningPosts.sort(function (first, second) {
-                if (first.createdAt < second.createdAt){
-                    return 1;
-                }
-                else if (first.createdAt > second.createdAt){
-                    return -1;
-                }
-                else{
-                    return 0;
-                }
-            });
+            returningPosts.sort(comparator);
 
             return returningPosts.slice(skip, skip + top);
         }
         else {
             let returningPosts = posts.slice(skip, skip + top);
 
-            returningPosts.sort(function (first, second) {
-                if (first.createdAt < second.createdAt){
-                    return 1;
-                }
-                else if (first.createdAt > second.createdAt){
-                    return -1;
-                }
-                else{
-                    return 0;
-                }
-            });
+            returningPosts.sort(comparator);
 
             return returningPosts;
+        }
+    }
+
+    function comparator(first, second) {
+        if (first.createdAt < second.createdAt){
+            return 1;
+        }
+        else if (first.createdAt > second.createdAt){
+            return -1;
+        }
+        else{
+            return 0;
         }
     }
 
@@ -355,10 +347,8 @@
                     }
                     break;
                 case 'photoLink':
-                    if (post.photoLink){
-                        if (typeof post.photoLink !== 'string'){
-                            return false;
-                        }
+                    if (post.photoLink && typeof post.photoLink !== 'string'){
+                        return false;
                     }
                     break;
                 case 'hashTags':
@@ -379,7 +369,7 @@
                     return false;
             }
             return true;
-        })
+        });
     }
 
     function addPost(post){
@@ -397,6 +387,7 @@
                 return false;
             }
         }
+
         if(!validatePost(post, Object.keys(post))){
             return false;
         }
