@@ -52,10 +52,19 @@
 
     <servlet>
         <servlet-name>Test2Servlet</servlet-name>
-        <servlet-class>test2Servlet</servlet-class>
+        <servlet-class>Test2Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Test2Servlet</servlet-name>
         <url-pattern>/test2</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Tweets</servlet-name>
+        <servlet-class>Tweets</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Tweets</servlet-name>
+        <url-pattern>/tweets/*</url-pattern>
     </servlet-mapping>
 </web-app>
