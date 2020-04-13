@@ -147,6 +147,7 @@ header {
 }
 
 .user-ava {
+    margin-top: -2%;
     float: left;
     height: 42px;
     border-radius: 10px;
@@ -173,8 +174,8 @@ header {
 }
 
 .post-image {
-    margin: -1% 0%;
-    width: 15%;
+    margin: -1% 0;
+    width: 175px;
 }
 
 .post-footer {
@@ -184,12 +185,14 @@ header {
 }
 
 .like-img {
-    width: 20px; 
+    width: 22px;
     cursor: pointer;
 }
 
 .like-counter {
     font-style: italic;
+    font-weight: 700;
+    font-size: 140%;
 }
 
 .more-button {

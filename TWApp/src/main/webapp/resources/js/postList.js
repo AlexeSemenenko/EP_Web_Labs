@@ -171,7 +171,6 @@ class PostList {
     }
 }
 
-//Testing
 let tweets = new PostList([
     {
         id: '1',
@@ -199,314 +198,401 @@ let tweets = new PostList([
             'Иванов Иван', 'Алексей Семененко'
         ]
     },
-    {
-        id: '3',
-        description: 'Я всем известный русский байрон',
-        createdAt: new Date('2019-12-21T23:23:23'),
-        author: 'Сиша Александрович',
-        photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
-        hashTags: [
-            'солнце', 'небо', 'перньдевушка', 'helloworld'
-        ],
-        likes: [
-            'Алексей Семененко'
-        ]
-    },
-    {
-        id: '4',
-        description: 'ПЛ МИД ИЗИ ГЕЙМ',
-        createdAt: new Date('2020-03-21T22:30:00'),
-        author: 'Арчик Слэер',
-        photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
-        hashTags: [
-            'dota2ismylife'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
-        ]
-    },
-    {
-        id: '5',
-        description: 'Секрет Шахмат',
-        createdAt: new Date('2020-03-17T11:11:00'),
-        author: 'Тема Енис',
-        photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
-        hashTags: [
-            'секретики'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
-        ]
-    },
-    {
-        id: '6',
-        description: 'Более 76 тыс. человек во всем мире уже излечились от заболевания, спровоцированного новым коронавирусом, тогда как количество смертей превысило 6,4 тыс.',
-        createdAt: new Date('2020-03-17T23:00:00'),
-        author: 'Иванов Иван',
-        photoLink: 'https://www.pressball.by/images/stories/2020/03/20200310231542.jpg',
-        hashTags: [
-            'coronavirus'
-        ],
-        likes: [
-            'Иванов Иван'
-        ]
-    },
-    {
-        id: '7',
-        description: 'Секрет Шахмат',
-        createdAt: new Date('2020-03-17T23:00:00'),
-        author: 'Тема Енис',
-        photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
-        hashTags: [
-            'люблюсеверноекоролевство', 'helloworld'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
-        ]
-    },
-    {
-        id: '8',
-        description: 'ПЛ МИД ИЗИ ГЕЙМ',
-        createdAt: new Date('2020-03-21T22:30:00'),
-        author: 'Арчик Слэер',
-        photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
-        hashTags: [
-            'dota2ismylife', 'helloworld'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
-        ]
-    },
-    {
-        id: '9',
-        description: 'Я всем известный русский байрон',
-        createdAt: new Date('2019-12-21T23:23:23'),
-        author: 'Сиша Александрович',
-        photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
-        hashTags: [
-            'солнце', 'небо', 'перньдевушка'
-        ],
-        likes: [
-            'Алексей Семененко'
-        ]
-    },
-    {
-        id: '10',
-        description: 'Хеллоу Ворлд!',
-        createdAt: new Date('2020-03-22T20:26:00'),
-        author: 'Алексей Семененко',
-        photoLink: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg',
-        hashTags: [
-            'firstprogramm', 'helloworld'
-        ],
-        likes: [
-            'Иванов Иван', 'Алексей Семененко'
-        ]
-    },
-    {
-        id: '11',
-        description: 'Более 76 тыс. человек во всем мире уже излечились от заболевания, спровоцированного новым коронавирусом, тогда как количество смертей превысило 6,4 тыс.',
-        createdAt: new Date('2020-03-17T23:00:00'),
-        author: 'Иванов Иван',
-        photoLink: 'https://www.pressball.by/images/stories/2020/03/20200310231542.jpg',
-        hashTags: [
-            'coronavirus', 'helloworld'
-        ],
-        likes: [
-            'Иванов Иван'
-        ]
-    },
-    {
-        id: '12',
-        description: 'Хеллоу Ворлд!',
-        createdAt: new Date('2020-03-22T20:26:00'),
-        author: 'Алексей Семененко',
-        photoLink: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg',
-        hashTags: [
-            'firstprogramm', 'helloworld'
-        ],
-        likes: [
-            'Иванов Иван', 'Алексей Семененко'
-        ]
-    },
-    {
-        id: '13',
-        description: 'Я всем известный русский байрон',
-        createdAt: new Date('2019-12-21T23:23:23'),
-        author: 'Сиша Александрович',
-        photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
-        hashTags: [
-            'солнце', 'небо', 'перньдевушка'
-        ],
-        likes: [
-            'Алексей Семененко'
-        ]
-    },
-    {
-        id: '14',
-        description: 'ПЛ МИД ИЗИ ГЕЙМ',
-        createdAt: new Date('2020-03-21T22:30:00'),
-        author: 'Арчик Слэер',
-        photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
-        hashTags: [
-            'dota2ismylife'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
-        ]
-    },
-    {
-        id: '15',
-        description: 'Секрет Шахмат',
-        createdAt: new Date('2020-03-17T11:11:00'),
-        author: 'Тема Енис',
-        photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
-        hashTags: [
-            'секретики'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
-        ]
-    },
-    {
-        id: '16',
-        description: 'Более 76 тыс. человек во всем мире уже излечились от заболевания, спровоцированного новым коронавирусом, тогда как количество смертей превысило 6,4 тыс.',
-        createdAt: new Date('2020-03-17T23:00:00'),
-        author: 'Иванов Иван',
-        photoLink: 'https://www.pressball.by/images/stories/2020/03/20200310231542.jpg',
-        hashTags: [
-            'coronavirus'
-        ],
-        likes: [
-            'Иванов Иван'
-        ]
-    },
-    {
-        id: '17',
-        description: 'Секрет Шахмат',
-        createdAt: new Date('2020-03-17T23:00:00'),
-        author: 'Тема Енис',
-        photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
-        hashTags: [
-            'люблюсеверноекоролевство'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
-        ]
-    },
-    {
-        id: '18',
-        description: 'ПЛ МИД ИЗИ ГЕЙМ',
-        createdAt: new Date('2020-03-21T22:30:00'),
-        author: 'Арчик Слэер',
-        photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
-        hashTags: [
-            'dota2ismylife'
-        ],
-        likes: [
-            'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
-        ]
-    },
-    {
-        id: '19',
-        description: 'Я всем известный русский байрон',
-        createdAt: new Date('2019-12-21T23:23:23'),
-        author: 'Сиша Александрович',
-        photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
-        hashTags: [
-            'солнце', 'небо', 'перньдевушка'
-        ],
-        likes: [
-            'Алексей Семененко'
-        ]
-    },
-    {
-        id: '20',
-        description: 'Хеллоу Ворлд!',
-        createdAt: new Date('2020-03-22T20:26:00'),
-        author: 'Алексей Семененко',
-        photoLink: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg',
-        hashTags: [
-            'firstprogramm', 'helloworld'
-        ],
-        likes: [
-            'Иванов Иван', 'Алексей Семененко'
-        ]
-    }
+    // {
+    //     id: '3',
+    //     description: 'Я всем известный русский байрон',
+    //     createdAt: new Date('2019-12-21T23:23:23'),
+    //     author: 'Сиша Александрович',
+    //     photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
+    //     hashTags: [
+    //         'солнце', 'небо', 'перньдевушка', 'helloworld'
+    //     ],
+    //     likes: [
+    //         'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '4',
+    //     description: 'ПЛ МИД ИЗИ ГЕЙМ',
+    //     createdAt: new Date('2020-03-21T22:30:00'),
+    //     author: 'Арчик Слэер',
+    //     photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
+    //     hashTags: [
+    //         'dota2ismylife'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '5',
+    //     description: 'Секрет Шахмат',
+    //     createdAt: new Date('2020-03-17T11:11:00'),
+    //     author: 'Тема Енис',
+    //     photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
+    //     hashTags: [
+    //         'секретики'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
+    //     ]
+    // },
+    // {
+    //     id: '6',
+    //     description: 'Более 76 тыс. человек во всем мире уже излечились от заболевания, спровоцированного новым коронавирусом, тогда как количество смертей превысило 6,4 тыс.',
+    //     createdAt: new Date('2020-03-17T23:00:00'),
+    //     author: 'Иванов Иван',
+    //     photoLink: 'https://www.pressball.by/images/stories/2020/03/20200310231542.jpg',
+    //     hashTags: [
+    //         'coronavirus'
+    //     ],
+    //     likes: [
+    //         'Иванов Иван'
+    //     ]
+    // },
+    // {
+    //     id: '7',
+    //     description: 'Секрет Шахмат',
+    //     createdAt: new Date('2020-03-17T23:00:00'),
+    //     author: 'Тема Енис',
+    //     photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
+    //     hashTags: [
+    //         'люблюсеверноекоролевство', 'helloworld'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
+    //     ]
+    // },
+    // {
+    //     id: '8',
+    //     description: 'ПЛ МИД ИЗИ ГЕЙМ',
+    //     createdAt: new Date('2020-03-21T22:30:00'),
+    //     author: 'Арчик Слэер',
+    //     photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
+    //     hashTags: [
+    //         'dota2ismylife', 'helloworld'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '9',
+    //     description: 'Я всем известный русский байрон',
+    //     createdAt: new Date('2019-12-21T23:23:23'),
+    //     author: 'Сиша Александрович',
+    //     photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
+    //     hashTags: [
+    //         'солнце', 'небо', 'перньдевушка'
+    //     ],
+    //     likes: [
+    //         'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '10',
+    //     description: 'Хеллоу Ворлд!',
+    //     createdAt: new Date('2020-03-22T20:26:00'),
+    //     author: 'Алексей Семененко',
+    //     photoLink: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg',
+    //     hashTags: [
+    //         'firstprogramm', 'helloworld'
+    //     ],
+    //     likes: [
+    //         'Иванов Иван', 'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '11',
+    //     description: 'Более 76 тыс. человек во всем мире уже излечились от заболевания, спровоцированного новым коронавирусом, тогда как количество смертей превысило 6,4 тыс.',
+    //     createdAt: new Date('2020-03-17T23:00:00'),
+    //     author: 'Иванов Иван',
+    //     photoLink: 'https://www.pressball.by/images/stories/2020/03/20200310231542.jpg',
+    //     hashTags: [
+    //         'coronavirus', 'helloworld'
+    //     ],
+    //     likes: [
+    //         'Иванов Иван'
+    //     ]
+    // },
+    // {
+    //     id: '12',
+    //     description: 'Хеллоу Ворлд!',
+    //     createdAt: new Date('2020-03-22T20:26:00'),
+    //     author: 'Алексей Семененко',
+    //     photoLink: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg',
+    //     hashTags: [
+    //         'firstprogramm', 'helloworld'
+    //     ],
+    //     likes: [
+    //         'Иванов Иван', 'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '13',
+    //     description: 'Я всем известный русский байрон',
+    //     createdAt: new Date('2019-12-21T23:23:23'),
+    //     author: 'Сиша Александрович',
+    //     photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
+    //     hashTags: [
+    //         'солнце', 'небо', 'перньдевушка'
+    //     ],
+    //     likes: [
+    //         'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '14',
+    //     description: 'ПЛ МИД ИЗИ ГЕЙМ',
+    //     createdAt: new Date('2020-03-21T22:30:00'),
+    //     author: 'Арчик Слэер',
+    //     photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
+    //     hashTags: [
+    //         'dota2ismylife'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '15',
+    //     description: 'Секрет Шахмат',
+    //     createdAt: new Date('2020-03-17T11:11:00'),
+    //     author: 'Тема Енис',
+    //     photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
+    //     hashTags: [
+    //         'секретики'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
+    //     ]
+    // },
+    // {
+    //     id: '16',
+    //     description: 'Более 76 тыс. человек во всем мире уже излечились от заболевания, спровоцированного новым коронавирусом, тогда как количество смертей превысило 6,4 тыс.',
+    //     createdAt: new Date('2020-03-17T23:00:00'),
+    //     author: 'Иванов Иван',
+    //     photoLink: 'https://www.pressball.by/images/stories/2020/03/20200310231542.jpg',
+    //     hashTags: [
+    //         'coronavirus'
+    //     ],
+    //     likes: [
+    //         'Иванов Иван'
+    //     ]
+    // },
+    // {
+    //     id: '17',
+    //     description: 'Секрет Шахмат',
+    //     createdAt: new Date('2020-03-17T23:00:00'),
+    //     author: 'Тема Енис',
+    //     photoLink: 'https://stopga.me/images/articles/2015/07/10/witcher_3_wild_hunt_prohozhdenie-1436504700-s.jpg',
+    //     hashTags: [
+    //         'люблюсеверноекоролевство'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко', 'Тема Енис'
+    //     ]
+    // },
+    // {
+    //     id: '18',
+    //     description: 'ПЛ МИД ИЗИ ГЕЙМ',
+    //     createdAt: new Date('2020-03-21T22:30:00'),
+    //     author: 'Арчик Слэер',
+    //     photoLink: 'https://weplay-cdn.azureedge.net/weplay-public/2019-12-17/507a1d393cc008e9e75425da9bbcd82e_large_cover.302823-D28457-7CA56C.jpeg',
+    //     hashTags: [
+    //         'dota2ismylife'
+    //     ],
+    //     likes: [
+    //         'Арчик Слэер', 'Сиша Александрович', 'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '19',
+    //     description: 'Я всем известный русский байрон',
+    //     createdAt: new Date('2019-12-21T23:23:23'),
+    //     author: 'Сиша Александрович',
+    //     photoLink: 'https://literaturno.com/wp-content/uploads/2017/06/pushkin-1-797x368.jpg',
+    //     hashTags: [
+    //         'солнце', 'небо', 'перньдевушка'
+    //     ],
+    //     likes: [
+    //         'Алексей Семененко'
+    //     ]
+    // },
+    // {
+    //     id: '20',
+    //     description: 'Хеллоу Ворлд!',
+    //     createdAt: new Date('2020-03-22T20:26:00'),
+    //     author: 'Алексей Семененко',
+    //     photoLink: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg',
+    //     hashTags: [
+    //         'firstprogramm', 'helloworld'
+    //     ],
+    //     likes: [
+    //         'Иванов Иван', 'Алексей Семененко'
+    //     ]
+    // }
 ]);
 
-console.log("Top 5 posts:");
-console.log(tweets.getPage(0, 5));
-
-console.log("Top 5 posts, skip 2 posts, hashTag: helloworld (auto sort by created date):");
-console.log(tweets.getPage(2, 5, {hashTags: ['helloworld']}));
-
-console.log("Top 2 posts, skip 10 posts, author Алексей Семененко:");
-console.log(tweets.getPage(10, 2, {author: 'Алексей Семененко'}));
-
-console.log("Get posts with incorrect input:");
-console.log(tweets.getPage('10',2, {author: 'Алексей Семененко'}));
-
-console.log("Get post with id 1:");
-console.log(tweets.get('1'));
-
-console.log("Get post with id 100 (not exist):");
-console.log(tweets.get('100'));
-
-console.log("Get post with wrong input:");
-console.log(tweets.get(2));
-
-console.log("Validating post 1:");
-console.log(PostList.validate({id: '123', createdAt: new Date(),  description: 'validating', author:'MEMEME', hashTags: ['testing']}));
-
-console.log("Validating post 2 (without id and author):");
-console.log(PostList.validate({createdAt: new Date(),  description: 'validating', photoLink: "www.url"}));
-
-console.log("Add new post with correct parameters and get it:");
-tweets.add({id: "123", createdAt: new Date(), description: "test description", author: "alex", likes: ['Arthas']});
-console.log(tweets.get('123'));
-
-console.log("Edit newly added post:");
-tweets.edit('123',{description: "edit", photoLink: "wwwwwwwww"});
-console.log(tweets.get('123'));
-
-console.log("Try to edit unchangeable parameters:");
-tweets.edit('123',{id: '111', description: "edit", photoLink: "wwwwwwwww"});
-
-console.log("Delete newly edited post and get it:");
-tweets.remove('123');
-console.log(tweets.get('123'));
-
-console.log("Try to add posts array:");
-let invalid = tweets.addAll([
-    {
-        id: '111',
-        description: 'addAll1',
-        createdAt: new Date(),
-        author: 'JS',
-        hashTags: [
-            'test', '1'
-        ],
-        likes: [
-            'Алексей Семененко'
-        ]
-    },
-    {
-        id: '333',
-        description: 'failed',
-        hashTags: [
-            'test', '3'
-        ],
-        likes: [
-            'JS', 'Алексей Семененко'
-        ]
+class PostElements {
+    constructor(post, isLogIn) {
+        this._post = post;
+        this._isLogIn = isLogIn;
     }
-]);
-console.log("Invalid posts:");
-console.log(invalid);
-console.log("Get new added post:");
-console.log(tweets.get('111'));
 
-console.log("Clear the page and try to get smth:");
-tweets.clear();
-console.log(tweets.getPage());
+    getPost() {
+        let post = document.createElement("div");
+        post.className = "test-post";
+
+        post.append(this._getPostHeader());
+        post.append(this._getPostDescription());
+        post.append(this._getPostFooter());
+
+        return post;
+    }
+
+    _getPostHeader() {
+        let postHeader = document.createElement("div");
+        postHeader.className = "post-header";
+
+        postHeader.innerHTML = "<h3>" + this._post.author + ", " + this._post.createdAt.toLocaleString() + "</h3>";
+
+        let userImg = document.createElement("img");
+        userImg.className = "user-ava";
+        userImg.setAttribute("src", "resources\\pictures\\user.png");
+
+        postHeader.append(userImg);
+
+        postHeader.innerHTML += "<i>" + this._post.hashTags.map(hashTag => {
+            return "#" + hashTag;
+        }); + "</i>";
+
+        let deleteImg = document.createElement("img");
+        deleteImg.className = "delete-img";
+        deleteImg.setAttribute("src", "resources\\pictures\\delete.png");
+
+        postHeader.append(deleteImg);
+
+        let editImg = document.createElement("img");
+        editImg.className = "edit-img";
+        editImg.setAttribute("src", "resources\\pictures\\pen.png");
+
+        postHeader.append(editImg);
+
+        return postHeader;
+    }
+
+    _getPostDescription() {
+        let postDescription = document.createElement("div");
+        postDescription.className = "post-description";
+
+        postDescription.innerHTML = "<p>" + this._post.description + "</p>";
+
+        if(this._post.hasOwnProperty("photoLink")) {
+            let img = document.createElement("img");
+            img.className = "post-image";
+            img.setAttribute("src", this._post.photoLink);
+
+            postDescription.append(img);
+        }
+
+        return postDescription;
+    }
+
+    _getPostFooter() {
+        let postFooter = document.createElement("div");
+        postFooter.className = "post-footer";
+
+        let displayLikes = document.createElement("span");
+        displayLikes.className = "likes-display";
+        displayLikes.innerHTML = '<img class="like-img" src="resources\\pictures\\like.png">';
+
+        let likeCounter = document.createElement("span");
+        likeCounter.className = "like-counter";
+        likeCounter.textContent = this._post.likes.length;
+
+        displayLikes.append(likeCounter);
+
+        postFooter.append(displayLikes);
+
+        return postFooter;
+    }
+}
+
+class View {
+    constructor() {
+        this._isLogIn = true;
+        this._posts = document.querySelector(".posts");
+        this._postList = tweets;
+    }
+
+    _logInElements() {
+        if(!this._isLogIn) {
+            document.querySelector(".log-out").style.visibility = "hidden";
+            document.querySelector(".username").style.visibility = "hidden";
+        }
+    }
+
+    _controlButtons() {
+        if(!this._isLogIn) {
+            let deleteButtons = document.querySelectorAll(".delete-img");
+            deleteButtons.forEach(button => {
+                button.style.visibility = "hidden";
+            });
+
+            let editButtons = document.querySelectorAll(".edit-img");
+            editButtons.forEach(button => {
+                button.style.visibility = "hidden";
+            });
+        }
+    }
+
+    _addButton() {
+        if(!this._isLogIn) {
+            document.querySelector(".add-new-post").style.visibility = "hidden";
+        }
+    }
+
+    refreshPage() {
+        this._logInElements();
+        this._addButton();
+
+        this._posts.innerHTML = "";
+
+        this._postList.getPage(0, 20).forEach(post => {
+            this._posts.append((new PostElements(post, true)).getPost());
+        });
+
+        this._controlButtons();
+    }
+}
+
+let view = new View();
+view.refreshPage();
+
+function addPost(post) {
+    if (view._postList.add(post)) {
+        view.refreshPage();
+        return true;
+    }
+
+    return false;
+}
+
+function editPost(id, post) {
+    if (view._postList.edit(id, post)) {
+        view.refreshPage();
+        return true;
+    }
+
+    return false;
+}
+
+function removePost(id) {
+    if (view._postList.remove(id)) {
+        view.refreshPage();
+        return true;
+    }
+
+    return false;
+}
