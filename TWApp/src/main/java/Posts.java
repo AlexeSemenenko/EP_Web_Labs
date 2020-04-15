@@ -85,21 +85,6 @@ public class Posts {
         return true;
     }
 
-    public List<Post> addAll(List<Post> posts) {
-        List<Post> invalidPosts = new ArrayList<Post>();
-
-        for(Post post: posts) {
-            if(validate(post)) {
-                this.posts.add(post);
-            }
-            else {
-                invalidPosts.add(post);
-            }
-        }
-
-        return invalidPosts;
-    }
-
     public List<Post> getAll() {
         return posts;
     }
