@@ -9,6 +9,13 @@ public class GetNameServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter pw = response.getWriter();
 
-        pw.println("<big>The name is " + request.getParameter("name") + "</big>");
+        String name = request.getParameter("name");
+
+        if(name.length() < 100) {
+            pw.println("<big>The name is " + name + "</big>");
+        }
+        else {
+            pw.println("<big>The name is too long</big>");
+        }
     }
 }
