@@ -7,7 +7,7 @@
 
     <servlet>
         <servlet-name>StatusServlet</servlet-name>
-        <servlet-class>StatusServlet</servlet-class>
+        <servlet-class>savageTW.StatusServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>StatusServlet</servlet-name>
@@ -16,7 +16,7 @@
 
     <servlet>
         <servlet-name>GetNameServlet</servlet-name>
-        <servlet-class>GetNameServlet</servlet-class>
+        <servlet-class>savageTW.GetNameServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GetNameServlet</servlet-name>
@@ -25,7 +25,7 @@
 
     <servlet>
         <servlet-name>CheckServlet</servlet-name>
-        <servlet-class>CheckServlet</servlet-class>
+        <servlet-class>savageTW.CheckServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CheckServlet</servlet-name>
@@ -34,7 +34,7 @@
 
     <servlet>
         <servlet-name>PageServlet</servlet-name>
-        <servlet-class>PageServlet</servlet-class>
+        <servlet-class>savageTW.PageServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>PageServlet</servlet-name>
@@ -43,7 +43,7 @@
 
     <servlet>
         <servlet-name>Test1Servlet</servlet-name>
-        <servlet-class>Test1Servlet</servlet-class>
+        <servlet-class>savageTW.Test1Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Test1Servlet</servlet-name>
@@ -52,7 +52,7 @@
 
     <servlet>
         <servlet-name>Test2Servlet</servlet-name>
-        <servlet-class>Test2Servlet</servlet-class>
+        <servlet-class>savageTW.Test2Servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Test2Servlet</servlet-name>
@@ -61,7 +61,7 @@
     
     <servlet>
         <servlet-name>Tweets</servlet-name>
-        <servlet-class>Tweets</servlet-class>
+        <servlet-class>savageTW.Tweets</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Tweets</servlet-name>

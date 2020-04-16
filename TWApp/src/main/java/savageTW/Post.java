@@ -1,3 +1,5 @@
+package savageTW;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -23,20 +25,8 @@ public class Post {
         this.likes = new ArrayList<>(likes);
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = (Date)createdAt.clone();
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public void setPhotoLink(String photoLink) {
