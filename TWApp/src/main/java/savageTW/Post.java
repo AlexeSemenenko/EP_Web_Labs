@@ -15,7 +15,7 @@ public class Post {
     private List<String> likes;
 
     public Post(String id, String description, Date createdAt, String author,
-                String photoLink, List<String> hashTags, List<String> likes) {
+            String photoLink, List<String> hashTags, List<String> likes) {
         this.id = id;
         this.description = description;
         this.createdAt = (Date)createdAt.clone();
@@ -33,9 +33,7 @@ public class Post {
         this.photoLink = photoLink;
     }
 
-    public void setHashTags(List<String> hashTags) {
-        Collections.copy(this.hashTags, hashTags);
-    }
+    public void setHashTags(List<String> hashTags) { Collections.copy(this.hashTags, hashTags); }
 
     public void setLikes(List<String> likes) {
         Collections.copy(this.likes, likes);

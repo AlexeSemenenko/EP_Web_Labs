@@ -58,7 +58,7 @@
         <servlet-name>Test2Servlet</servlet-name>
         <url-pattern>/test2</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>Tweets</servlet-name>
         <servlet-class>savageTW.Tweets</servlet-class>
