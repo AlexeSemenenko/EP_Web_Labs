@@ -15,19 +15,21 @@ class PostList {
             let returningPosts = this._posts;
 
             for (let param in filterConfig){
-                if (param === 'hashTags'){
-                    for (let i = 0; i < filterConfig.hashTags.length; i++){
-                        returningPosts = returningPosts.filter(post => post.hashTags.includes(filterConfig.hashTags[i]));
-                    }
-                }
-                else if (param === 'dateFrom'){
-                    returningPosts = returningPosts.filter(post => post.createdAt >= filterConfig.dateFrom);
-                }
-                else if (param === 'dateTo'){
-                    returningPosts = returningPosts.filter(post => post.createdAt < filterConfig.dateTo);
-                }
-                else if (param === 'author'){
-                    returningPosts = returningPosts.filter(post => post.author === filterConfig.author);
+                switch (param) {
+                    case 'hashTags':
+                        for (let i = 0; i < filterConfig.hashTags.length; i++){
+                            returningPosts = returningPosts.filter(post => post.hashTags.includes(filterConfig.hashTags[i]));
+                        }
+                        break;
+                    case 'dateFrom':
+                        returningPosts = returningPosts.filter(post => post.createdAt >= filterConfig.dateFrom);
+                        break;
+                    case 'dateTo':
+                        returningPosts = returningPosts.filter(post => post.createdAt < filterConfig.dateTo);
+                        break;
+                    case 'author':
+                        returningPosts = returningPosts.filter(post => post.author === filterConfig.author);
+                        break;
                 }
             }
 
@@ -451,11 +453,12 @@ class PostElements {
 
     _getPostHeader() {
         let postHeader = document.createElement("div");
+        let userImg = document.createElement("img");
+        let deleteImg = document.createElement("img");
+        let editImg = document.createElement("img");
 
         postHeader.className = "post-header";
         postHeader.innerHTML = "<h3>" + this._post.author + ", " + this._post.createdAt.toLocaleString() + "</h3>";
-
-        let userImg = document.createElement("img");
 
         userImg.className = "user-ava";
         userImg.setAttribute("src", "resources\\pictures\\user.png");
@@ -466,14 +469,10 @@ class PostElements {
             return "#" + hashTag;
         }); + "</i>";
 
-        let deleteImg = document.createElement("img");
-
         deleteImg.className = "delete-img";
         deleteImg.setAttribute("src", "resources\\pictures\\delete.png");
 
         postHeader.append(deleteImg);
-
-        let editImg = document.createElement("img");
 
         editImg.className = "edit-img";
         editImg.setAttribute("src", "resources\\pictures\\pen.png");
@@ -491,6 +490,7 @@ class PostElements {
 
         if(this._post.hasOwnProperty("photoLink")) {
             let img = document.createElement("img");
+
             img.className = "post-image";
             img.setAttribute("src", this._post.photoLink);
 
@@ -502,15 +502,13 @@ class PostElements {
 
     _getPostFooter() {
         let postFooter = document.createElement("div");
+        let displayLikes = document.createElement("span");
+        let likeCounter = document.createElement("span");
 
         postFooter.className = "post-footer";
 
-        let displayLikes = document.createElement("span");
-
         displayLikes.className = "likes-display";
-        displayLikes.innerHTML = '<img class="like-img" src="resources\\pictures\\like.png">';
-
-        let likeCounter = document.createElement("span");
+        displayLikes.innerHTML = "<img class='like-img' src='resources\\pictures\\like.png'>";
 
         likeCounter.className = "like-counter";
         likeCounter.textContent = this._post.likes.length;
@@ -540,12 +538,11 @@ class View {
     _controlButtons() {
         if(!this._isLogIn) {
             let deleteButtons = document.querySelectorAll(".delete-img");
+            let editButtons = document.querySelectorAll(".edit-img");
 
             deleteButtons.forEach(button => {
                 button.style.visibility = "hidden";
             });
-
-            let editButtons = document.querySelectorAll(".edit-img");
 
             editButtons.forEach(button => {
                 button.style.visibility = "hidden";
