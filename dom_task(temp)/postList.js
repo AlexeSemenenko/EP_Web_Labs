@@ -51,9 +51,6 @@ class PostList {
         else if (first.createdAt > second.createdAt){
             return -1;
         }
-        else{
-            return 0;
-        }
     }
 
     get(id) {
