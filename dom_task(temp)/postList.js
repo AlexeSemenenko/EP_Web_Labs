@@ -439,6 +439,7 @@ class PostElements {
 
     getPost() {
         let post = document.createElement("div");
+
         post.className = "test-post";
 
         post.append(this._getPostHeader());
@@ -450,11 +451,12 @@ class PostElements {
 
     _getPostHeader() {
         let postHeader = document.createElement("div");
-        postHeader.className = "post-header";
 
+        postHeader.className = "post-header";
         postHeader.innerHTML = "<h3>" + this._post.author + ", " + this._post.createdAt.toLocaleString() + "</h3>";
 
         let userImg = document.createElement("img");
+
         userImg.className = "user-ava";
         userImg.setAttribute("src", "resources\\pictures\\user.png");
 
@@ -465,12 +467,14 @@ class PostElements {
         }); + "</i>";
 
         let deleteImg = document.createElement("img");
+
         deleteImg.className = "delete-img";
         deleteImg.setAttribute("src", "resources\\pictures\\delete.png");
 
         postHeader.append(deleteImg);
 
         let editImg = document.createElement("img");
+
         editImg.className = "edit-img";
         editImg.setAttribute("src", "resources\\pictures\\pen.png");
 
@@ -481,8 +485,8 @@ class PostElements {
 
     _getPostDescription() {
         let postDescription = document.createElement("div");
-        postDescription.className = "post-description";
 
+        postDescription.className = "post-description";
         postDescription.innerHTML = "<p>" + this._post.description + "</p>";
 
         if(this._post.hasOwnProperty("photoLink")) {
@@ -498,13 +502,16 @@ class PostElements {
 
     _getPostFooter() {
         let postFooter = document.createElement("div");
+
         postFooter.className = "post-footer";
 
         let displayLikes = document.createElement("span");
+
         displayLikes.className = "likes-display";
         displayLikes.innerHTML = '<img class="like-img" src="resources\\pictures\\like.png">';
 
         let likeCounter = document.createElement("span");
+
         likeCounter.className = "like-counter";
         likeCounter.textContent = this._post.likes.length;
 
@@ -533,11 +540,13 @@ class View {
     _controlButtons() {
         if(!this._isLogIn) {
             let deleteButtons = document.querySelectorAll(".delete-img");
+
             deleteButtons.forEach(button => {
                 button.style.visibility = "hidden";
             });
 
             let editButtons = document.querySelectorAll(".edit-img");
+
             editButtons.forEach(button => {
                 button.style.visibility = "hidden";
             });
@@ -570,6 +579,7 @@ view.refreshPage();
 function addPost(post) {
     if (view._postList.add(post)) {
         view.refreshPage();
+
         return true;
     }
 
@@ -579,6 +589,7 @@ function addPost(post) {
 function editPost(id, post) {
     if (view._postList.edit(id, post)) {
         view.refreshPage();
+
         return true;
     }
 
@@ -588,6 +599,7 @@ function editPost(id, post) {
 function removePost(id) {
     if (view._postList.remove(id)) {
         view.refreshPage();
+
         return true;
     }
 
