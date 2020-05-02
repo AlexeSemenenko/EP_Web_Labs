@@ -21,10 +21,21 @@ public class Tweets extends HttpServlet {
         if (uris.length == 3 && uris[2].equals("search")) {
             Gson gson = new Gson();
 
-            response.getWriter().print(posts.getAll().stream().map(gson::toJson).
-                    collect(Collectors.joining("\n")));
+            response.getWriter()
+                    .print(posts
+                            .getAll()
+                            .stream()
+                            .map(gson::toJson)
+                            .collect(Collectors
+                                    .joining("\n")));
         } else {
-            response.getWriter().print((new Gson()).toJson(posts.add((new Gson()).fromJson(request.getReader().readLine(), Post.class))));
+            response.getWriter()
+                    .print((new Gson())
+                            .toJson(posts
+                                    .add((new Gson())
+                                            .fromJson(request
+                                                    .getReader()
+                                                    .readLine(), Post.class))));
         }
     }
 

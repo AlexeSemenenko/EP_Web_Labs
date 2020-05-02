@@ -44,7 +44,7 @@ public class Posts {
     }
 
     public boolean add(Post post) {
-        if(validate(post)) {
+        if (validate(post)) {
             posts.add(post);
 
             return true;
@@ -54,8 +54,8 @@ public class Posts {
     }
 
     public boolean remove(String id) {
-        for(Post post: posts) {
-            if(post.getId().equals(id)) {
+        for (Post post: posts) {
+            if (post.getId().equals(id)) {
                 posts.remove(post);
 
                 return true;
