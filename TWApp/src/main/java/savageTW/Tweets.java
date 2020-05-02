@@ -21,7 +21,8 @@ public class Tweets extends HttpServlet {
         if (uris.length == 3 && uris[2].equals("search")) {
             Gson gson = new Gson();
 
-            response.getWriter()
+            response
+                    .getWriter()
                     .print(posts
                             .getAll()
                             .stream()
@@ -29,7 +30,8 @@ public class Tweets extends HttpServlet {
                             .collect(Collectors
                                     .joining("\n")));
         } else {
-            response.getWriter()
+            response
+                    .getWriter()
                     .print((new Gson())
                             .toJson(posts
                                     .add((new Gson())
