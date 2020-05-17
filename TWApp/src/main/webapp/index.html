@@ -6,6 +6,9 @@
         <meta content="News page">
         <link rel="stylesheet" type="text/css" href="resources\css\styles.css">
         <link href="https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+    
+        <script src="resources\js\model.js"></script>
+        <script src="resources\js\view.js"></script>
     </head>
 
     <body>
@@ -14,10 +17,8 @@
 
             <button class="log-out">Log out</button>
 
-            <h2 class="username">Alex Semenenko</h2>
-
-            <script src="resources\js\model.js"></script>
-            <script src="resources\js\view.js"></script>
+            <h2 class="username"></h2>
+            
         </header>
 
         <div class="filters">
@@ -39,7 +40,41 @@
             <button class="add-new-post">Add post</button>
 
             <div class="posts">
-                
+
+                <template class="post-template">
+
+                    <div class="single-post">
+                        
+                        <div class="post-header">
+                            <img class="user-ava" src="resources\\pictures\\user.png">
+        
+                            <h3 class="post-info"></h3>
+        
+                            <i class="post-tags"></i>
+                    
+                            <img class="delete-img" src="resources\\pictures\\delete.png">
+        
+                            <img class="edit-img" src="resources\\pictures\\pen.png">
+                        </div>
+        
+                        <div class="post-description">
+                            <p class="post-text"></p>
+        
+                            <img class="post-image">
+                        </div>
+        
+                        <div class="post-footer">
+                            <span class="likes-display">
+                                <img class="like-img" src="resources\\pictures\\like.png">
+        
+                                <span class="like-counter"></span>    
+                            </span>
+                        </div>
+
+                    </div>
+                    
+                </template>
+
             </div>
 
             <button class="more-button">More</button> 

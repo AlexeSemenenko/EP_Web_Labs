@@ -28,14 +28,31 @@ let tweets = new Model([
 ]);
 
 class View {
-    _postsHTML = document.querySelector(".posts");
-
+    _posts;
+    _postTemplate;
+    _user;
     _isLogIn;
-    _postList;
 
-    constructor(isLogIn, tweets) {
+    constructor(user, isLogIn) {
+        this._posts = document.querySelector('.posts');
+        this._postTemplate = document.querySelector('.post-template');
+        this._user = user;
         this._isLogIn = isLogIn;
-        this._postList = tweets;
+    }
+
+    _showSinglePost(post) {
+        let template = document.importNode(this._postTemplate.content, true);
+        this._view(post, template);
+        this._posts.appendChild(template);
+    }
+
+    _view(post, template) {
+        template.firstElementChild.id = post.id;
+        template.querySelector('.post-text').textContent = post.description;
+        template.querySelector('.post-info').textContent = post.author + ' ' + post.createdAt.toLocaleString();
+        template.querySelector('.post-image').setAttribute('src', post.photoLink);
+        template.querySelector('.post-tags').textContent = '#' + post.hashTags.join(' #');
+        template.querySelector('.like-counter').textContent = post.likes.length;
     }
 
     _showExitButton() {
@@ -45,9 +62,8 @@ class View {
     }
 
     _showUsername() {
-        if(!this._isLogIn) {
-            document.querySelector(".username").style.visibility = "hidden";
-        }
+        document.querySelector(".username").textContent = this._user;
+        
     }
 
     _showDeleteButtons() {
@@ -76,97 +92,25 @@ class View {
         }
     }
 
-    getPost(currentPost) {
-        let post = document.createElement("div");
+    refreshPage() {
+        let tmp = this._posts.firstElementChild;
 
-        post.className = "test-post";
-
-
-        let postHeader = document.createElement("div");
-        let userImg = document.createElement("img");
-        let deleteImg = document.createElement("img");
-        let editImg = document.createElement("img");
-
-        postHeader.className = "post-header";
-        postHeader.innerHTML = "<h3>" + currentPost.author + ", " + currentPost.createdAt.toLocaleString() + "</h3>";
-
-        userImg.className = "user-ava";
-        userImg.setAttribute("src", "resources\\pictures\\user.png");
-
-        postHeader.append(userImg);
-
-        postHeader.innerHTML += "<i>" + currentPost.hashTags.map(hashTag => {
-            return "#" + hashTag;
-        }); + "</i>";
-
-        deleteImg.className = "delete-img";
-        deleteImg.setAttribute("src", "resources\\pictures\\delete.png");
-
-        postHeader.append(deleteImg);
-
-        editImg.className = "edit-img";
-        editImg.setAttribute("src", "resources\\pictures\\pen.png");
-
-        postHeader.append(editImg);
-
-        post.append(postHeader);
-
-
-        let postDescription = document.createElement("div");
-
-        postDescription.className = "post-description";
-        postDescription.innerHTML = "<p>" + currentPost.description + "</p>";
-
-        if(currentPost.hasOwnProperty("photoLink")) {
-            let img = document.createElement("img");
-
-            img.className = "post-image";
-            img.setAttribute("src", currentPost.photoLink);
-
-            postDescription.append(img);
+        while(tmp !== this._posts.lastElementChild) {
+            tmp.remove();
+            tmp = this._posts.firstElementChild;
         }
 
-        post.append(postDescription);
-
-
-        let postFooter = document.createElement("div");
-        let displayLikes = document.createElement("span");
-        let likeCounter = document.createElement("span");
-
-        postFooter.className = "post-footer";
-
-        displayLikes.className = "likes-display";
-        displayLikes.innerHTML = "<img class='like-img' src='resources\\pictures\\like.png'>";
-
-        likeCounter.className = "like-counter";
-        likeCounter.textContent = currentPost.likes.length;
-
-        displayLikes.append(likeCounter);
-
-        postFooter.append(displayLikes);
-
-        post.append(postFooter);
-
-
-        return post;
-    }
-
-    refreshPage() {
-        this._postsHTML.innerHTML = "";
-
-        this._postList.getPage().forEach(post => {
-            this._postsHTML.append(this.getPost(post));
-        });
+        tweets.getPage().forEach(post => this._showSinglePost(post));
 
         this._showExitButton();
         this._showUsername();
-        this._addButton();
         this._showDeleteButtons();
         this._showEditButtons();
+        this._addButton();
     }
 
     addPost(post) {
-        if (this._postList.add(post)) {
+        if(tweets.add(post)) {
             this.refreshPage();
 
             return true;
@@ -176,7 +120,7 @@ class View {
     }
 
     editPost(id, post) {
-        if (this._postList.edit(id, post)) {
+        if (tweets.edit(id, post)) {
             this.refreshPage();
 
             return true;
@@ -186,7 +130,7 @@ class View {
     }
 
     removePost(id) {
-        if (this._postList.remove(id)) {
+        if (tweets.remove(id)) {
             this.refreshPage();
 
             return true;
@@ -199,7 +143,14 @@ class View {
 let view;
 
 window.onload = () => {
-    view = new View(true, tweets);
+    let userName = 'Alexei Semenenko';
 
+    if(userName.length == 0) {
+        view = new View('Guest', false);
+    }
+    else {
+        view = new View(userName, true);
+    }
+    
     view.refreshPage();
 };

@@ -159,18 +159,4 @@ class Model {
         }
         return false;
     }
-
-    addAll(posts) {
-        let invalidPosts = [];
-
-        posts.forEach(post => {
-            if (!this.add(post)) invalidPosts.push(post)
-        });
-
-        return invalidPosts;
-    }
-
-    clear() {
-        this._posts = [];
-    }
 }

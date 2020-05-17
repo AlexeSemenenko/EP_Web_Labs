@@ -1,4 +1,4 @@
-header {
+ header {
     text-align: right;
     position: absolute;
     background-color: #db2929;
@@ -136,11 +136,11 @@ header {
     border-radius: 15px;
 }
 
-.test-post {
+ .single-post {
     border-radius: 15px;
     background-color: white;
     margin: 1% 4%;
-}
+} 
 
 .post-header {
     font-size: 105%;
