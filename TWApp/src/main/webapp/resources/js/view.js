@@ -42,11 +42,11 @@ class View {
 
     _showSinglePost(post) {
         let template = document.importNode(this._postTemplate.content, true);
-        this._view(post, template);
+        View._view(post, template);
         this._posts.appendChild(template);
     }
 
-    _view(post, template) {
+    static _view(post, template) {
         template.firstElementChild.id = post.id;
         template.querySelector('.post-text').textContent = post.description;
         template.querySelector('.post-info').textContent = post.author + ' ' + post.createdAt.toLocaleString();
@@ -145,12 +145,7 @@ let view;
 window.onload = () => {
     let userName = 'Alexei Semenenko';
 
-    if(userName.length == 0) {
-        view = new View('Guest', false);
-    }
-    else {
-        view = new View(userName, true);
-    }
+    view = userName.length == 0 ? new View('Guest', false) : new View(userName, true);
     
     view.refreshPage();
 };

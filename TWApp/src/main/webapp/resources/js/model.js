@@ -12,10 +12,10 @@ class Model {
             return;
         }
 
-        if (filterConfig){
+        if (filterConfig) {
             let returningPosts = this._posts;
 
-            for (let param in filterConfig){
+            for (let param in filterConfig) {
                 switch (param) {
                     case 'hashTags':
                         for (let i = 0; i < filterConfig.hashTags.length; i++){
@@ -48,10 +48,11 @@ class Model {
     }
 
     static comparator(first, second) {
-        if (first.createdAt < second.createdAt){
+        if (first.createdAt < second.createdAt) {
             return 1;
         }
-        else if (first.createdAt > second.createdAt){
+        
+        if (first.createdAt > second.createdAt) {
             return -1;
         }
 
@@ -59,52 +60,52 @@ class Model {
     }
 
     get(id) {
-        if (typeof id === 'string'){
+        if (typeof id === 'string') {
             return this._posts.find(post => post.id === id);
         }
-        else {
-            console.log('Incorrect type of id. Use \'string\'');
-        }
+        
+        console.log('Incorrect type of id. Use \'string\'');
+    
     }
 
     static validate(post, params = ['id', 'description', 'author', 'createdAt', 'photoLink', 'hashTags', 'likes']) {
         return params.every(function (param) {
             switch (param) {
                 case 'id':
-                    if (!post.id || typeof post.id !== 'string'){
+                    if (!post.id || typeof post.id !== 'string') {
                         return false;
                     }
                     break;
                 case 'description':
-                    if (!post.description || typeof post.description !== 'string' || post.description.length > 250){
+                    if (!post.description || typeof post.description !== 'string' || post.description.length > 250) {
                         return false;
                     }
                     break;
                 case 'author':
-                    if (!post.author || typeof post.author !== 'string'){
+                    if (!post.author || typeof post.author !== 'string') {
                         return false;
                     }
                     break;
                 case 'createdAt':
-                    if (!post.createdAt || Object.prototype.toString.call(post.createdAt) !== '[object Date]'){
+                    if (!post.createdAt || Object.prototype.toString.call(post.createdAt) !== '[object Date]') {
                         return false;
                     }
                     break;
                 case 'photoLink':
-                    if (post.photoLink && typeof post.photoLink !== 'string'){
+                    if (post.photoLink && typeof post.photoLink !== 'string') {
                         return false;
                     }
                     break;
                 case 'hashTags':
-                    if (post.hashTags){
-                        if (!post.hashTags.every(tag => typeof tag === 'string')){
+                    if (post.hashTags) {
+                        if (!post.hashTags.every(tag => typeof tag === 'string')) {
                             return false;
                         }
                     }
                     break;
                 case 'likes':
-                    if (post.likes){
-                        if (!post.likes.every(like => typeof like === 'string')){
+                    if (post.likes) {
+                        if (!post.likes.every(like => typeof like === 'string')) {
                             return false;
                         }
                     }
@@ -112,35 +113,37 @@ class Model {
                 default:
                     return false;
             }
+
             return true;
         });
     }
 
-    add(post){
-        if (Model.validate(post)){
+    add(post) {
+        if (Model.validate(post)) {
             this._posts.push(post);
 
             return true;
         }
+
         return false;
     }
 
-    edit(id, post){
-        for (let param in post){
-            if (param === 'id' || param === 'author' || param === 'createdAt' || param === 'likes'){
+    edit(id, post) {
+        for (let param in post) {
+            if (param === 'id' || param === 'author' || param === 'createdAt' || param === 'likes') {
                 console.log("You can't change id, author, createdAt and likes");
 
                 return false;
             }
         }
 
-        if(!Model.validate(post, Object.keys(post))){
+        if (!Model.validate(post, Object.keys(post))) {
             return false;
         }
 
         let editingPost = this.get(id);
 
-        for (let param in post){
+        for (let param in post) {
             editingPost[param] = post[param];
         }
 
@@ -148,15 +151,16 @@ class Model {
     }
 
     remove(id){
-        if (typeof id === 'string'){
+        if (typeof id === 'string') {
             let index = this._posts.findIndex(post => post.id === id);
 
-            if (index !== -1){
+            if (index !== -1) {
                 this._posts.splice(index, 1);
 
                 return true;
             }
         }
+
         return false;
     }
 }
